@@ -18,16 +18,16 @@ embedding_model.to("cpu")
 embeddings = embedding_model.encode(texts, convert_to_numpy=True).tolist()
 
 # Connect to local Qdrant instance
-qdrant = QdrantClient(path="qdrant_storage")
+qdrant = QdrantClient("localhost", port=6333)
 
 # Define the collection name
-collection_name = "rag_hybrid_search"
+collection_name = "DB2"
 
 # Create the collection with Cosine distance for high accuracy
-qdrant.create_collection(
-    collection_name=collection_name,
-    vectors_config=VectorParams(size=len(embeddings[0]), distance=Distance.COSINE)
-)
+# qdrant.create_collection(
+#     collection_name=collection_name,
+#     vectors_config=VectorParams(size=len(embeddings[0]), distance=Distance.COSINE)
+# )
 
 # Prepare data points for Qdrant indexing
 points = [

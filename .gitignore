@@ -1,3 +1,2 @@
 /venv
-*.json
 /qdrant_storage

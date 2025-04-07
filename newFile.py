@@ -40,6 +40,6 @@ def extract_text_by_section(pdf_path, output_file):
     print(f"Chunks saved to {output_file}")
 
 # Usage Example:
-pdf_path = r"D:\minimal-rag-master\docs_pdf\DSR vol 1.pdf"
+pdf_path = r"C:\Users\harsh\Downloads\armyrules1954.pdf"
 output_file = "chunked_text.txt"
 extract_text_by_section(pdf_path, output_file)

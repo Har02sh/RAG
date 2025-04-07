@@ -48,6 +48,6 @@ def extract_chunks_for_rag(pdf_path, output_file, max_chunk_size=1000):
     print(f"Chunks saved to {output_file}")
 
 # Usage
-pdf_path = r"D:\minimal-rag-master\docs_pdf\DSR vol 1.pdf"
+pdf_path = r"C:\Users\harsh\Downloads\TheArmyAct1950.pdf"
 output_file = "rag_chunks.json"
 extract_chunks_for_rag(pdf_path, output_file)
